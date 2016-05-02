@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <!-- CSS -->
+     <link rel="stylesheet" href="css/bootstrap.css"/>
+     <link rel="stylesheet" href="css/objetos.css"/>
+     <link rel="stylesheet" href="css/ngDialog.min.css"/>
+      <link rel="stylesheet" href="css/ngDialog-theme-default.css"/>
+
+	 <!-- Angular-->
+	 <script src="js/angular/lib/angular.min.js"></script>
+	 <script src="js/angular/lib/ngDialog.min.js"></script>
+	 <script src="js/angular/modulo/modulo.js"></script>
+	 <script src="js/angular/controller/controller.js"></script>
+	 <title>Validador Linha </title>
+</head>
+
+<header id="cabecalho">
+	<div id="titulo">
+		 <h3>Validador Linha -<span style="color: red"> Beta</span></h3>
+	</div>
+	
+	
+</header>
+
+<body>
+	
+	
+     <div>
+     	
+     	
+     	 	
+     	 	
+     </div>
+	<div ng-app ='app'>
+	<div ng-controller ='appctrl' ng-model="linha;vencimento;valor;imagem">
+	
+	           
+	           
+	          
+				<form name="frmbarra">
+				
+				<div id="frm">
+				
+				<div id="barra">
+				<div><span style="margin-left: 23px"><strong>Código de Barras: </strong></span></div>	
+				<p><input type="text" size="55" maxlength="44"
+				                                          ng-model="barra" autofocus
+				                                          id="barracampo"
+				                                          placeholder="Digite o código de barras"/>
+					<span style="margin-left: 70px"><button type ="submit" class="btn"  id="btnValidarbarra"
+							ng-click="gera()" >Validar</button></span>
+					</p>  		
+			   
+			   </div>
+			  </form>
+			  <form name="frmlinha">
+			  	 <div id="linha">
+					<div><span style="margin-left: 32.5px"><strong>Linha Digitável: </strong></span></div>
+					<input type="text" size="60" maxlength="56"
+				                                          ng-model="linhadigitavel" 
+				                                          id="linhacampo"
+				                                          placeholder="Digite a linha digitável"/>
+					<span style="margin-left: 40px"><button type ="submit" class="btn"  id="btnValidarlinha"
+							ng-click="gera()" >Validar</button></span>
+					<button type ="button" class="btn" ng-click="limpaCampo()" id="btnLimpar" >Limpar</button>  		
+			   
+			  	 </div>
+			   
+			    </div>
+			
+				</form>
+				<img id ="logoBanco" src="{{imagem}}" width="60px" height="50px" ></img>
+					
+				<div id="resultado">
+				<div id="textoResultado">
+				 	<p>{{linha}}</p>	
+				 	<p>{{vencimento}}</p>
+				 	<p>{{valor}}</p>	
+				</div>	 
+				</div>
+               
+                <script type 'text/ng-template' id='mensagens'>
+	                
+					{{mensagem}}    
+	
+                </script>
+
+	</div>
+    
+    
+    
+    </div>
+
+
+
+
+</body>
+
+<footer id="rodape">2015 - Desenvolvido por Ulisses
+	
+	
+	
+</footer>
+
+</html>
